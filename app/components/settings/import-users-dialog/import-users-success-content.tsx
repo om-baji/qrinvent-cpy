@@ -1,5 +1,5 @@
 import { ClientOnly } from "remix-utils/client-only";
-import SuccessAnimation from "~/components/scanner/success-animation";
+import SuccessAnimation from "~/components/scanner/success-animation"; // Updated import
 import { Button } from "~/components/shared/button";
 import { WarningBox } from "~/components/shared/warning-box";
 import When from "~/components/when/when";
