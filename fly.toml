@@ -1,4 +1,4 @@
-app = "qr-webapp"
+app = "qr-scan1"
 primary_region = "bom"
 kill_signal = "SIGINT"
 kill_timeout = "5s"
