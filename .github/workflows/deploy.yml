@@ -5,7 +5,7 @@ on:
     branches:
       - main
       - dev
-
+  workflow_dispatch: # Add this line to enable the Run workflow button
 permissions:
   actions: write
   contents: read
