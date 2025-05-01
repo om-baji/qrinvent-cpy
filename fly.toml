@@ -1,8 +1,10 @@
-app = "shelf-webapp"
-primary_region = "ams"
+app = "qr-invent1"
+primary_region = "bom"
 kill_signal = "SIGINT"
 kill_timeout = "5s"
 swap_size_mb = 512
+[[vm]]
+  size = "shared-cpu-1x"
 
 [experimental]
 auto_rollback = true
