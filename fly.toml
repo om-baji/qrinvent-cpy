@@ -1,4 +1,4 @@
-app = "qr-invent1"
+app = "qr-webapp"
 primary_region = "bom"
 kill_signal = "SIGINT"
 kill_timeout = "5s"
