@@ -14,8 +14,8 @@ export default function SuccessAnimation() {
   );
 } */
 
-  /*this copiolot agent 1*/
-  /* import Lottie from "lottie-react";
+/*this copiolot agent 1*/
+/* import Lottie from "lottie-react";
   import { ClientOnly } from "remix-utils/client-only";
   import successfullScanAnimation from "../../lottie/success-scan.json";
   
@@ -33,20 +33,19 @@ export default function SuccessAnimation() {
     );
   } */
 
-  /*this copiolot agent 2*/
-  import React, { lazy, Suspense } from "react";
-  import successfullScanAnimation from "../../lottie/success-scan.json";
-  const Lottie = lazy(() => import("lottie-react"));
-  
-  
-  export default function SuccessAnimation() {
-    return (
-      <Suspense fallback={<div>Loading animation...</div>}>
-        <Lottie
-          animationData={successfullScanAnimation}
-          loop={false}
-          style={{ width: 200, height: 200 }}
-        />
-      </Suspense>
-    );
-  }
+/*this copiolot agent 2*/
+import React, { lazy, Suspense } from "react";
+import successfullScanAnimation from "../../lottie/success-scan.json";
+const Lottie = lazy(() => import("lottie-react"));
+
+export default function SuccessAnimation() {
+  return (
+    <Suspense fallback={<div>Loading animation...</div>}>
+      <Lottie
+        animationData={successfullScanAnimation}
+        loop={false}
+        style={{ width: 200, height: 200 }}
+      />
+    </Suspense>
+  );
+}
