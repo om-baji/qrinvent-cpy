@@ -3,7 +3,8 @@
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'qr-invent2'
+#app = 'qr-invent2'
+app = 'qr-invent2-git'
 primary_region = 'bom'
 kill_signal = 'SIGINT'
 kill_timeout = '5s'
