@@ -7,6 +7,7 @@ node_modules
 .env.staging
 .env.production
 .env.staging
+.sh
 .cache
 
 tsconfig.tsbuildinfo
