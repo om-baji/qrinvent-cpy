@@ -1,8 +1,10 @@
-app = "qr-invent2-git"
+app = "qr-inventory"
 primary_region = "bom"
 kill_signal = "SIGINT"
 kill_timeout = "5s"
 swap_size_mb = 512
+[[vm]]
+  size = "shared-cpu-1x"
 
 [experimental]
 auto_rollback = true
@@ -31,15 +33,8 @@ auto_start_machines = true
 min_machines_running = 1
 processes = ["app"]
 
-[http_service.concurrency]
-type = "requests"
-soft_limit = 100
-hard_limit = 125
-
-[[http_service.checks]]
-grace_period = "5s"
-interval = "10s"
-method = "GET"
-timeout = "2s"
-path = "/healthcheck"
-protocol = "http"
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
+  memory_mb = 1024
