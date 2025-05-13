@@ -36,7 +36,7 @@ jobs:
         uses: SebRollen/toml-action@v1.0.2
         id: app_name
         with:
-          file: "fly.toml"
+          file: "fly.production.toml"
           field: "app"
 
       - name: 🐳 Set up Docker Buildx
@@ -92,14 +92,16 @@ jobs:
         uses: SebRollen/toml-action@v1.0.2
         id: app_name
         with:
-          file: "fly.toml"
+          file: "fly.production.toml"
           field: "app"
 
       - name: 🎈 Setup Fly
         uses: superfly/flyctl-actions/setup-flyctl@v1.4
 
       - name: 🚀 Deploy Production
-        run: flyctl deploy --remote-only --build-arg COMMIT_SHA=${{ github.sha }}
+        run: |
+          cp fly.production.toml fly.toml
+          flyctl deploy --remote-only --build-arg COMMIT_SHA=${{ github.sha }} --app ${{ steps.app_name.outputs.value }}
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 
