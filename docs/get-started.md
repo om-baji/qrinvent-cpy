@@ -38,6 +38,21 @@ If you prefer to run shelf locally or host your live app via docker, please chec
   >
   > _example : my_strong_passphrase_
 
+## Setting Up OTPs in Supabase
+
+1. In your Supabase project, go to **Authentication** → **Email** → **Templates**.
+2. Select the **Magic Link** template for editing.
+3. Replace the template content with the following HTML:
+
+```html
+<h2>Magic Link</h2>
+
+<p><strong>Code: {{ .Token }}</strong></p>
+
+<p>Follow this link to log in:</p>
+<p><a href="{{ .ConfirmationURL }}">Log In</a></p>
+```
+
 - Go to https://app.supabase.io/project/{PROJECT}/settings/api to find your secrets
 - "Project API keys"
 - Add your `MAPTILER_TOKEN`, `SUPABASE_URL`, `SERVER_URL`, `SUPABASE_SERVICE_ROLE` (aka `service_role` `secret`), `SUPABASE_ANON_PUBLIC` (aka `anon` `public`) and `DATABASE_URL` in the `.env` file
